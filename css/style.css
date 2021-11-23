@@ -1,0 +1,264 @@
+/**
+HTML overrides
+**/
+
+h4 > sub{
+    font-weight: lighter;
+    padding-top: 2em;
+}
+
+/**
+Bootstrap class overrides
+**/
+nav > .form-inline{
+    margin: 0;
+}
+
+/**
+Custom classes
+**/
+.diff{
+    background-color: rgb(255, 125, 125);
+}
+
+.searchResult{
+    cursor: pointer;
+    transition: all 0.5s;
+    padding: 0.2em;
+    border-radius: 0.2em;
+}
+
+.searchResult:hover{
+    background-color: lightgray;
+}
+
+.indexMarker{
+    margin-right: 1em;
+}
+
+.indexItem{
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+    font-size: 55%;
+    padding: 1px;
+}
+
+.indexItem.selected{
+    font-weight: bolder;
+    font-size: 90%;
+    text-decoration: underline;
+}
+
+.indexItem:hover{
+    font-size: 110%;
+    padding: 0.3em;
+    padding-left: 0.8em;
+}
+
+.mainBlock{
+    padding: 2em;
+}
+
+.focusButton{
+    margin-bottom: -2.5em;
+    margin-top: 0.5em;
+}
+
+.btn-icon-toggle{
+    background-color: rgba(0, 0, 0 , 0);
+    color: white;
+    font-weight: normal;
+    transition: all 0.5s;
+}
+
+.btn-icon-toggle.selected{
+    background-color: rgb(59, 89, 128);
+}
+
+.btn-icon-toggle:hover{
+    background-color: rgb(59, 89, 128, 0.8);
+    color: white;
+}
+
+.passageCollapse{
+    margin-top: 0.5em;
+    margin-left: -.5em;
+    margin-bottom: -.5em;
+}
+
+.passageRow{
+    border-radius: 0.5em;
+    border: 1px solid gray;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    transition: all 0.5s;
+}
+
+.passageRow.blurb{
+    cursor: pointer;
+}
+
+.passageRow.blurb:hover{
+    background-color: rgba(52, 58, 70, 0.1);
+}
+
+.passage-id{
+    font-weight: bold;
+}
+
+.passage, .compared{
+    max-height: 50vh;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+.passage.blurb{
+    max-height: 1.5em;
+    overflow-y: hidden;
+}
+
+.markup{
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 4px;
+    transition: all 0.5s;
+    border-bottom: 1px solid rgba(112, 111, 124, 0.8);
+}
+
+.context{
+    color: black;
+    background-color:rgba(112, 111, 124, 0.8)
+}
+
+.decorator{
+    margin-left: -4px;
+    font-size: 95%;
+    margin-right: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 2px;
+    border: 1px solid rgba(112, 111, 124, 0.8);
+}
+
+.decorator > i{
+    font-size: 70%;
+    margin-bottom: 2px; 
+}
+
+.markup:hover{
+    color: white;
+    background-color: darkgray;
+}
+
+.fullName{
+    border-color: rgb(181, 49, 39);
+}
+
+.fullName:hover{
+    background-color: rgb(181, 49, 39);
+}
+
+.searchHighlight{
+    background-color: rgb(252, 181, 116);
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.navbar > a{
+    color :white;
+}
+
+.editionSelect{
+    font-size: 80%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.editionSelect:hover{
+    font-size: 85%;
+    opacity: 0.8;
+}
+
+.newRelatedEdition{
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 100%;
+    padding-left: 1em;
+}
+
+.newRelatedEdition:hover{
+    background-color: lightgray;
+    padding-left: 2em;
+}
+
+/**
+ID's
+**/
+
+#currentFragment{
+    height: 50vh;
+    border: 1px solid lightgray;
+    padding: 1em;
+    margin-bottom: 0.5em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+}
+
+#citationLink{
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#citationLink:hover{
+    opacity: 0.6;
+}
+
+#citationOverlay{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#citationOverlay > .container{
+    margin-top: 5em;
+    padding: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
+    background-color: white;
+    border-radius: 0.5em;
+}
+
+#popup{
+    position: absolute;
+    z-index: 100;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(52, 58, 70, 0.2);
+    border: 1px solid lightgray;
+    border-radius: 0.5em;
+    max-width: 20em;
+    min-width: 20em;
+}
+
+#editionSelectPopup{
+    position: absolute;
+    z-index: 101;
+    padding: 0.5em;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 0.5em;
+    max-width: 15em;
+    min-width: 15em;
+}

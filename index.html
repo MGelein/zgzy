@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ZGZY - Fragment Browser</title>
+    <meta name="description" content="ZGZY Digital Edition">
+    <meta name="author" content="Mees Gelein">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css?v=1.5">
+
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <nav class="navbar navbar-dark bg-dark  justify-content-between">
+        <a class="navbar-brand" href="#">ZGZY Parallels</a>
+        <a href='http://chinese-empires.eu/zgzy/'><i class="fas fa-question-circle"></i>&nbsp; Info</a>
+        <div class='form-inline'>
+            <button id='peopleIcon' class='btn btn-icon-toggle mr-sm-2 selected'><i class="fas fa-user"></i>&nbsp;People</button>
+            <button id='dateIcon' class='btn btn-icon-toggle mr-sm-2'><i class="far fa-clock"></i>&nbsp;Dates</button>
+            <button id='placeIcon' class='btn btn-icon-toggle mr-sm-2'><i class="fas fa-map-marker-alt"></i>&nbsp;Places</button>
+            <button id='diffIcon' class='btn btn-icon-toggle mr-sm-2'><i class="fas fa-not-equal"></i>&nbsp;Difference</button>
+        </div>
+        <span id="citationLink" onclick="showCitationOverlay()"><i class="fas fa-link"></i>&nbsp;How To Cite Us</span>
+        <div class='form-inline'>
+            <input id='searchField' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" onclick='doSearch();'>Search</button>
+        </div>
+    </nav>
+
+    <!-- HOLDS ALL THE CONTENT -->
+    <div class='container-fluid'>
+
+        <!-- MAIN CONTENT OF THE WINDOW -->
+        <div class='row'>
+            <!-- INDEX PART -->
+            <div class='col-sm-3 mainBlock' id='indexHolder'>
+                <h4 id='editionHeader'>Edition</h4>
+                <div id="indexList"></div>
+            </div>
+
+            <!-- MAIN FRAGMENT PART -->
+            <div class='col-sm-9 mainBlock'>
+                <div id="searchResults" style="display:none">
+                </div>
+                <div id="editionBody">
+                    <div class='row'>
+                        <div class='col-sm-6'>
+                            <h4 id='chapterHeader'>Chapter</h4>
+                        </div>
+                        <div class='col-sm-3'>
+                            <h4><span id='relatedEditionA'></span>
+                                <span class='editionSelect' onclick='showEditionSelect(event, "A")'>&nbsp;
+                                    <i id='editionSelectIconA' class="far fa-caret-square-down"></i>
+                                </span>
+                            </h4>
+                        </div>
+                        <div class='col-sm-3'>
+                            <h4><span id='relatedEditionB'></span>
+                                <span class='editionSelect' onclick='showEditionSelect(event, "B")'>&nbsp;
+                                    <i id='editionSelectIconB' class="far fa-caret-square-down"></i>
+                                </span>
+                            </h4>
+                        </div>
+                    </div>
+                    <div id='chapterBody'>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="citationOverlay" style="display: none">
+        <div class='container'>
+            <h3>How To Cite Us</h3>
+            <p>There are multiple ways to cite this website, its authors and the works we have used.</p>
+            <h5>External URL Reference</h5>
+            <p>If you want to refer someone to a specific passage on this website, please use the url code below, or copy it from your browsers address bar</p>
+            <code id='urlReference'>...</code>
+            <br><br>
+            <h5>Bibliographic Reference To This Website</h5>
+            <p>You might want to reference this website in a paper, essay or other form of scholarly output. In that case, here is how you cite us:</p>
+            <cite>Hilde De Weerdt, Gabe van Beijeren, and Mees Gelein. “Reading The Essentials of Governance from Taizong’s Reign Digitally.” https://chinese-empires.eu/zgzy 2020</cite>
+            <br><br>
+            <button class='btn btn-lg btn-outline-dark' onclick="showCitationOverlay()">Continue</button>
+        </div>
+    </div>
+
+    <div id="popup" style="display:none">
+    </div>
+
+    <div id="editionSelectPopup" style="display:none">
+        <h6>Switch to different edition:</h6>
+        <div id='editionSelectContent'></div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/compare.js?v=1.3"></script>
+    <script src="js/script.js?v=2.2"></script>
+</body c>
+
+</html>
